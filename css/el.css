@@ -1,0 +1,159 @@
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.el{
+    width: 800px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(7, 120px);
+    grid-template-rows: repeat(7, 120px);
+    justify-content: space-around;
+    position: relative;
+}
+
+.one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven{
+    background-color: #323234;
+}
+
+.one{
+    grid-column-start: span 3 ;
+}
+
+.two{
+    grid-row-start: 2;
+    grid-row-end: span 2;
+}
+
+.three{
+    grid-row-start: 4;
+    grid-column-start: span 3;
+}
+
+.four{
+    grid-row-start: 5;
+    grid-row-end: span 2;
+}
+
+.five{
+    grid-row-start: 7;
+    grid-column-start: span 3;
+}
+
+.six{
+    grid-column-start: 5 ;
+    grid-row-start: span 6;
+}
+
+.seven{
+    grid-row-start: 7;
+    grid-column-start: 5;
+    grid-column-end: span 3;
+}
+
+.el::before{
+    content: "";
+    position: absolute;
+    background-color: #fea604;
+    width: 80px;
+    height: 80px;
+    bottom: 20px;
+    right: 0;
+    animation-name: loo;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: backwards;
+    animation-timing-function: linear;
+}
+
+@keyframes loo{
+    0%{
+        right: 0;
+    }
+    30%{
+        right: 235px;
+        bottom: 20px;
+    }
+    80%{
+        right: 235px;
+        bottom: 750px;
+        opacity: 1;
+    }
+    100%{
+        right: 235px;
+        bottom: 750px;
+        opacity: 0;
+    }
+}
+
+.el::after{
+    content: "";
+    position: absolute;
+    background-color: #fea604;
+    width: 80px;
+    height: 80px;
+    top: 20px;
+    right: 470px;
+    animation-name: eoo;
+    animation-duration: 5s;
+    animation-delay: 7s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes eoo{
+    0%{
+        top: 20px;
+        right: 470px;
+    }
+    10%{
+        top: 20px;
+        right: 720px;
+    }
+    20%{
+        top: 380px;
+        right: 720px;
+    }
+    30%{
+        top: 380px;
+        right: 470px;
+    }
+    40%{
+        top: 380px;
+        right: 720px;
+    }
+    50%{
+        top: 750px;
+        right: 720px;
+    }
+    60%{
+        top: 750px;
+        right: 470px;
+    }
+    70%{
+        top: 750px;
+        right: 720px;
+    }
+    90%{
+        top: 20px;
+        right: 720px;
+    }
+    100%{
+        top: 20px;
+        right: 470px;
+    
+    }
+
+}
+
